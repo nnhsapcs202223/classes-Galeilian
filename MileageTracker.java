@@ -46,8 +46,22 @@ public class MileageTracker
      */
     public MileageTracker()
     {
+     /**
+     * Default constructor fot the MileageTracker class.
+     *      Initializes the object's miles driven and fuel consumed r=ti 9
+     *          and †he VIN to null.
+     */
+        /*
+         * This 'this" reserved word references the current objeyc
+         *      (like "self" in python)
+         * Its usage is encouraged by not always required
+         */
+
+    this.distanceDriven = 0;
+    this.fuelConsumed = 0;
+    this.vin = null;    
+    }
      
-    }    
     
     /**
      * Contructs a new MileageTracker object with the specified
@@ -79,7 +93,8 @@ public class MileageTracker
      */
     public void incrementDistanceDriven (int miles)
     {
-    
+        this.distanceDriven = this.distanceDriven + miles;
+        this.distanceDriven += miles;
     }
     
     
@@ -90,7 +105,7 @@ public class MileageTracker
      */
     public int getDistanceDriven()
     {
-        return 0;
+        return this.distanceDriven;
     }
     
     
@@ -101,7 +116,7 @@ public class MileageTracker
      */
     public void incrementFuelConsumed(int gallons)
     {
-        //this.fuelConsumed += gallons;
+        this.fuelConsumed += gallons;
     }
     
     /**
@@ -111,8 +126,8 @@ public class MileageTracker
      */
     public int getFuelConsumed()
     {
-        //return this.fuelConsumed;
-        return 0;
+        return this.fuelConsumed;
+
     }
     
     
@@ -123,9 +138,9 @@ public class MileageTracker
      */
     public int getMileage()
     {
-        //double mileage = this.fuelConsumed / this.distanceDriven;
-        //return mileage;
-        return 0;
+        int mileage = this.fuelConsumed / this.distanceDriven;
+        return mileage;
+  
     }
     
     /**
@@ -135,8 +150,8 @@ public class MileageTracker
      */
     public String getVIN()
     {
-        //return this.vin;
-        return "";
+        return this.vin;
+
     }
     
     /**
@@ -144,12 +159,35 @@ public class MileageTracker
      * 
      * @param vin    the vehicle identification (VIN) of this car
      */
-    public void setVIN(String vin)
+    public void setVIN(String newvin)
     {
+        /*
+         * When the parameter is named cin, it "shadows" the
+         *      instance variable vin.
+         *      
+         * Local and parameter variables "shadow" omsyamce variables
+         *      of the same name. In this code. vin would refere to the
+         *      parameter and not the instance variable.
+         *      
+         * To refer explictly to an instance variable, use "this".
+         * 
+         * Better practice: avoid this issue by giving local, parameter.
+         *      and instance variables unique names!
+         */
+        
+        //bad
         //vin = vin;
+        
+        //good
+        //this.vin = vin;
+        
+        //better
+        this.vin = newvin;
     }
-}
+ 
+    
 
+}
 
 
 
