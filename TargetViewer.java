@@ -6,7 +6,7 @@ public class TargetViewer
     {
         JFrame frame = new JFrame();  // create frame object
         // set frame attributes
-        frame.setSize(300, 400);
+        frame.setSize(1000, 1000);
         frame.setTitle("Targets");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
