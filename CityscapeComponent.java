@@ -19,6 +19,9 @@ public class CityscapeComponent extends JComponent
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
     
+    public CityscapeComponent()
+    {        
+    }
     
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
