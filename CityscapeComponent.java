@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
+import java.awt.*;
 
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
@@ -35,12 +36,14 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        // invoke the draw method on each object in your Cityscape
-        // ...
+        Quadrilateral Block1 = new Quadrilateral(2, 3, 4, 4, 6, 6, 4, 5, Color.black); // initialize a new Car object
+      
+        Block1.draw(g2);      
         
         
     }
     
+     
     /**
      * Animate the cityscape by updating the objects such that they appear to be animated when
      *      they are next drawn.
