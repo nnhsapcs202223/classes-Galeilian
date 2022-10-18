@@ -15,6 +15,11 @@ public class CityscapeComponent extends JComponent
     // define the objects in your Cityscape as instance variables
     // ...
     
+        
+    Quadrilateral Block1 = new Quadrilateral(70, 70, 140, 70, 140, 140, 70, 140, Color.black); // initialize a new Car object
+    Quadrilateral Block2 = new Quadrilateral(35, 35, 70, 35, 60, 70, 35, 70, Color.green); // initialize a new Car object
+
+     
     
     
     // define the CityscapeComponent contructor and intiailize all instance variables
@@ -35,11 +40,8 @@ public class CityscapeComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
-        
-        Quadrilateral Block1 = new Quadrilateral(2, 3, 4, 4, 6, 6, 4, 5, Color.black); // initialize a new Car object
-      
-        Block1.draw(g2);      
-        
+        Block1.draw(g2);   
+        Block2.draw(g2);  
         
     }
     

@@ -8,24 +8,17 @@ import java.awt.geom.Path2D;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Quadrilateral
+public class Sun
 {
     // instance variables - replace the example below with your own
     public Color color;
-    public int topLeftx;
-    public int topRightx;
-    public int bottomLeftx;
-    public int bottomRightx;
-    public int topLefty;
-    public int topRighty;
-    public int bottomLefty;
-    public int bottomRighty;
-    public int NUMBEROFPOINTS = 4; 
-
+    int centerx;
+    int centery;
+    int radius;
     /**
      * Constructor for objects of class Quadrilateral
      */
-    public Quadrilateral()
+    public Sun()
     {
         // initialise instance variables
 
@@ -34,21 +27,12 @@ public class Quadrilateral
     /**
      * Constructor for objects of class Quadrilateral
      */
-    public Quadrilateral(int topLeftx, int topLefty, int topRightx, 
-    int topRighty, int bottomRightx, int bottomRighty, int bottomLeftx, 
-    int bottomLefty, Color color)
+    public Sun(int centerx, int centery, int radius, Color color)
     {
-        this.topLeftx = topLeftx;
-        this.topLefty = topLefty;
-        this.topRightx = topRightx;
-        this.topRighty = topRighty;
-        this.bottomRightx = bottomRightx;
-        this.bottomRighty = bottomRighty;
-        this.bottomLeftx = bottomLeftx;
-        this.bottomLefty = bottomLefty;
-        
+        this.centerx = centerx;
+        this.centery = centery;
+        this.radius = radius;
         this.color = color;
-
     }
 
     /**
@@ -60,7 +44,7 @@ public class Quadrilateral
     public void draw(Graphics2D g2)
     {
         Path2D.Double path = new Path2D.Double();
-        
+
         path.moveTo(topLeftx, topLefty); // polygon starts at this point
         path.lineTo(topRightx, topRighty); // next vertex
         path.lineTo(bottomRightx, bottomRighty); // next vertex
