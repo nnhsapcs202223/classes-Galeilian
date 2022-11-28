@@ -101,7 +101,7 @@ public class CityscapeComponent extends JComponent
         // update the objects in the cityscape so they are animated
         // ...
         
-        sunCentery += 34;
+        sunCentery += 17;
 
         // request that the Java Runtime repaints this component by invoking its paintComponent method
         //  do not explicitly invoke the paintComponent method
