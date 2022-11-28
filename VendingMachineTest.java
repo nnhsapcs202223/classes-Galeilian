@@ -32,13 +32,13 @@ public class VendingMachineTest
     @Test
     public void testFillUp()
     {
-       ...
+       //...
     }
 
     @Test
     public void testInsertToken()
     {
-       ...
+       //...
     }
 
 }
